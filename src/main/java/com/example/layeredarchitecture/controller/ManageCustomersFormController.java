@@ -72,9 +72,7 @@ public class ManageCustomersFormController {
         tblCustomers.getItems().clear();
         /*Get all customers*/
         try {
-
             ArrayList<CustomerDTO>customerDTO = customerDAO.getAllCustomer();
-
             for (CustomerDTO customer:customerDTO) {
                 tblCustomers.getItems().add(new CustomerTM(customer.getId(),customer.getName(),customer.getAddress()));
             }

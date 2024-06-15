@@ -9,8 +9,6 @@ import java.time.LocalDate;
 import java.util.List;
 
 public class OrderDAOImpl implements OrderDAO {
-
-    OrderDAO orderDAO = new OrderDAOImpl();
     @Override
     public String generateNewOrderId() throws SQLException, ClassNotFoundException {
         Connection connection = DBConnection.getDbConnection().getConnection();
