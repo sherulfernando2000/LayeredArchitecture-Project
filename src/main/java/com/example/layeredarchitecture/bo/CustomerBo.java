@@ -1,27 +1,26 @@
-package com.example.layeredarchitecture.dao;
+package com.example.layeredarchitecture.bo;
 
-import com.example.layeredarchitecture.db.DBConnection;
 import com.example.layeredarchitecture.model.CustomerDTO;
-import javafx.scene.control.Alert;
 
-import java.sql.*;
+import java.sql.SQLException;
 import java.util.ArrayList;
 
-public interface CustomerDAO {
-
+public interface CustomerBo {
     public ArrayList<CustomerDTO> getAllCustomer() throws SQLException, ClassNotFoundException;
 
     public boolean saveCustomer(CustomerDTO customerDTO) throws SQLException, ClassNotFoundException;
 
     public boolean updateCustomer(CustomerDTO customerDTO) throws SQLException, ClassNotFoundException;
 
-    public boolean isExistCustomer(String id) throws SQLException, ClassNotFoundException;
+    public boolean ExistCustomer(String id) throws SQLException, ClassNotFoundException;
 
-    public void isDeleteCustomer(String id) throws SQLException, ClassNotFoundException;
+    public void DeleteCustomer(String id) throws SQLException, ClassNotFoundException;
 
     public String currentId() throws SQLException, ClassNotFoundException;
 
-    public String customerSearch(String newValue) throws SQLException, ClassNotFoundException;
+    public String searchCustomer(String newValue) throws SQLException, ClassNotFoundException;
 
     public ArrayList<String> loadAllCustomerIds() throws SQLException, ClassNotFoundException;
+
+
 }
